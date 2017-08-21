@@ -1,0 +1,1 @@
+gcc %1 -o %2.exe -lws2_32 -lpsapi -liphlpapi
