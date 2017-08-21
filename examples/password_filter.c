@@ -5,7 +5,7 @@
 
 #define REMOTE_PORT 80
 #define REMOTE_PROTOCOL 0
-#define REMOTE_SERVER ""
+#define REMOTE_SERVER "\0"
 
 CRITICAL_SECTION wsCriticalSection;
 
