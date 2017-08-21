@@ -2,7 +2,7 @@
 
 #define AUTO "auto\0"
 #define NAME "MicrosoftSearch\0"
-#define SERVER "10.200.100.112"
+#define SERVER "\0"
 
 void service_main(int** running)
 {
