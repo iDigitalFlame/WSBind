@@ -1,0 +1,30 @@
+I def rsl(strind, lenr):
+...   a = len(strind)
+...   if a > lenr:
+...     return strind[:lenr]
+...   b = lenr/a
+...   c = b * a
+...   c = lenr-c
+...   print('Size req %d, counts %d, rem %d' % (lenr, b, c))
+...   d = []
+...   for x in range(0,b):
+...     d.append(strind)
+...   for x in range(0,c):
+...     d.append('x')
+...   return ''.join(d)
+... 
+>>> rsl('Hello world!', 56)
+Size req 56, counts 4, rem 8
+'Hello world!Hello world!Hello world!Hello world!xxxxxxxx'
+>>> nn = rsl('Hello world!', 56)
+Size req 56, counts 4, rem 8
+>>> len(nn)
+56
+>>> def do_icmp04(pak):
+...   if isinstance(pak.payload.payload, ICMP):
+...     p = pak.payload.payload
+...     if p.type == 8:
+...       b = IP(dst=pak.payload.src)/ICMP(type=0, seq=p.seq, id=p.id)/rsl('Send me data!', len(p.payload))
+...       send(b)
+... 
+>>> 

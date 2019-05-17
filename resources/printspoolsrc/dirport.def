@@ -1,0 +1,6 @@
+LIBRARY dirport.dll
+DESCRIPTION "dirport.dll"
+EXPORTS
+	DllMain
+	WaitForOutput
+	InitializePrintMonitor
