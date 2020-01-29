@@ -1,4 +1,5 @@
 // WinSHock Binder (WsBind) Constants Stub
+//
 // Copyright (C) 2020 iDigitalFlame
 //
 // This program is free software: you can redistribute it and/or modify
