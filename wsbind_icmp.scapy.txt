@@ -1,3 +1,19 @@
+// Copyright (C) 2020 iDigitalFlame
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as published
+// by the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+//
+
 I def rsl(strind, lenr):
 ...   a = len(strind)
 ...   if a > lenr:
@@ -12,7 +28,7 @@ I def rsl(strind, lenr):
 ...   for x in range(0,c):
 ...     d.append('x')
 ...   return ''.join(d)
-... 
+...
 >>> rsl('Hello world!', 56)
 Size req 56, counts 4, rem 8
 'Hello world!Hello world!Hello world!Hello world!xxxxxxxx'
@@ -26,5 +42,5 @@ Size req 56, counts 4, rem 8
 ...     if p.type == 8:
 ...       b = IP(dst=pak.payload.src)/ICMP(type=0, seq=p.seq, id=p.id)/rsl('Send me data!', len(p.payload))
 ...       send(b)
-... 
->>> 
+...
+>>>
